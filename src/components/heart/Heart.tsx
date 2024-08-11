@@ -1,0 +1,20 @@
+import { useEffect } from "react";
+import heartFull from "./../../assets/heart-full.svg";
+import heartEmpty from "./../../assets/heart-empty.svg";
+import "./Heart.scss";
+
+function Heart(props: { likes: number; onClick: () => void }) {
+  useEffect(() => {}, []);
+  return (
+    <div className="Heart">
+      <img
+        src={!props.likes ? heartEmpty : heartFull}
+        alt={"likes"}
+        width={24}
+      />
+      <span className="Heart-text">{props.likes}</span>
+    </div>
+  );
+}
+
+export default Heart;

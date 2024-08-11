@@ -1,0 +1,27 @@
+@import "./../../styles/colors.scss";
+.CharacterList-cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px 34px;
+}
+.CharacterList-more {
+  display: flex;
+  align-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.CharacterList-more__button {
+  margin: auto;
+  background-color: $red;
+  color: $white;
+  border: 0;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.CharacterList-loading {
+  display: flex;
+  margin-bottom: 20px;
+  img {
+    margin: auto
+  }
+}

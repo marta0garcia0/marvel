@@ -1,0 +1,29 @@
+@import "../../styles/colors.scss";
+.Filter {
+  margin: 48px 48px 16px 48px;
+  padding-bottom: 4px;
+  padding-top: 20px;
+  border-bottom: 1px solid $black;
+
+  input {
+    width: calc(100% - 30px);
+    font-size: 16px;
+    margin-left: 10px;
+    border: none;
+    font-family: "Roboto Condensed", Inter, system-ui, Avenir, Helvetica, Arial;
+    text-transform: uppercase;
+  }
+
+  input:focus {
+    outline: none;
+  }
+  ::placeholder {
+    color: $grey;
+    opacity: 1; /* Firefox */
+  }
+
+  ::-ms-input-placeholder {
+    /* Edge 12 -18 */
+    color: $grey;
+  }
+}
