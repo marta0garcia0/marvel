@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CharacterInfo from "./pages/character-info/CharacterInfo.component";
-import CharacterList from "./pages/character-list/characterList.component";
+import CharacterList from "./pages/character-list/CharacterList.component";
 import FavListPage from "./pages/fav-list/FavList.component";
 import Loader from "./components/loader/Loader";
 import { useAuth } from "./context/AuthContext";
