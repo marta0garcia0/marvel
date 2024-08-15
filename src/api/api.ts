@@ -18,9 +18,8 @@ export const getCharacters = async (
     baseURL +
       "characters" +
       `?ts=${ts}&apikey=${import.meta.env.VITE_PUBLIC_KEY}&hash=${hash}` +
-      `${nameStartsWith ? '&nameStartsWith=' + nameStartsWith : ''}` +
-      `${offset ? '&offset=' + offset : ''}`
-     
+      `${nameStartsWith ? "&nameStartsWith=" + nameStartsWith : ""}` +
+      `${offset ? "&offset=" + offset : ""}`,
   );
   return data.data;
 };
@@ -31,12 +30,10 @@ export const getComics = async (
   url: string,
 ): Promise<ComicResponse> => {
   const { data, status } = await axios.get<ComicResponseAPI>(
-    url +
-      `?ts=${ts}&apikey=${import.meta.env.VITE_PUBLIC_KEY}&hash=${hash}`,
+    url + `?ts=${ts}&apikey=${import.meta.env.VITE_PUBLIC_KEY}&hash=${hash}`,
   );
   if (status !== 200) throw new Error("Something went wrong");
   return data.data;
-
 };
 export const getCharacter = async (
   ts: string,

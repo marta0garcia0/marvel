@@ -10,6 +10,7 @@
     flex-direction: column;
   }
   .Character-header__wrapper {
+    flex-grow: 1;
     padding: 24px 16px 48px 16px;
   }
   .Character-header__title {
@@ -24,6 +25,12 @@
     img {
       cursor: pointer;
       width: 24px;
+    }
+    .Character-header__text {
+      flex-grow: 1;
+    }
+    .Character-header__icon {
+      width: 50px;
     }
   }
   .Character-header__description {
@@ -86,6 +93,9 @@
       margin: auto;
       margin-bottom: 20px;
     }
+    .Character-header__wrapper {
+      padding: 48px 0 0 48px;
+    }
   }
 }
 
@@ -98,6 +108,9 @@
     }
     .Character-header__container {
       flex-direction: row;
+    }
+    .Character-header__wrapper {
+      padding: 48px 0 0 48px;
     }
   }
 }

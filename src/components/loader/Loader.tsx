@@ -1,7 +1,7 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import loader from "./../../assets/spinner.svg";
 import "./Loader.scss";
-import { useNavigate } from "react-router-dom";
 
 function Loader(props: { url: string }) {
   const navigate = useNavigate();

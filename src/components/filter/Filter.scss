@@ -1,11 +1,10 @@
 @import "../../styles/colors.scss";
 .Filter {
-  margin: 48px 48px 16px 48px;
+  margin: 20px 6px 16px 6px;
   padding-bottom: 4px;
-  padding-top: 20px;
   border-bottom: 1px solid $black;
-
   input {
+    background-color: $white;
     width: calc(100% - 30px);
     font-size: 16px;
     margin-left: 10px;

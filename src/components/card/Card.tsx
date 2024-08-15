@@ -28,7 +28,7 @@ export const Card = ({
   };
 
   return (
-    <div className="Card" key={key}>
+    <div className="Card" key={key + ""}>
       <img
         className="Card-cover"
         onClick={() => onClick(character.id + "")}

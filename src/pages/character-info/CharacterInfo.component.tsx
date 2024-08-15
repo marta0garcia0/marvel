@@ -30,23 +30,29 @@ function CharacterInfo() {
   };
 
   useEffect(() => {
-    if (ts && hash && id) {
+    if (ts && hash && id && !loading) {
       setLoading(true);
       getCharacter(ts, hash, id)
         .then((data: CharacterResponse) => {
           setCharacter(data.results[0]);
-          if (ts && hash)
-            getComics(ts, hash, data.results[0].comics.collectionURI).then(
-              (data: any) => {
+          if (ts && hash) {
+            setLoading(true);
+
+            getComics(ts, hash, data.results[0].comics.collectionURI)
+              .then((data: ComicResponse) => {
                 setComics(data);
-              },
-            );
+              })
+              .finally(() => {
+                setLoading(false);
+              });
+          }
         })
         .finally(() => {
           setLoading(false);
         });
     }
   }, [id, ts, hash]);
+
   return !loading ? (
     <div className="CharacterInfo">
       {character ? (
@@ -63,13 +69,17 @@ function CharacterInfo() {
             <div className="Character-header__wrapper">
               <div>
                 <div className="Character-header__title">
-                  <p>{character.name}</p>
-                  <img
-                    onClick={onLike}
-                    className="Card-heart"
-                    src={liked ? heartFull : heartEmpty}
-                    alt={"like"}
-                  />
+                  <div className="Character-header__text">
+                    <p>{character.name}</p>
+                  </div>
+                  <div className="Character-header__icon">
+                    <img
+                      onClick={onLike}
+                      className="Card-heart"
+                      src={liked ? heartFull : heartEmpty}
+                      alt={"like"}
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -111,7 +121,11 @@ function CharacterInfo() {
             })}
           </div>
         </div>
-      ) : null}
+      ) : (
+        <div className="CharacterList-loading">
+          <img src={loader} alt={"Loading"} width={50} height={50} />
+        </div>
+      )}
     </div>
   ) : (
     <div className="CharacterList-loading">

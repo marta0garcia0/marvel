@@ -4,12 +4,15 @@ import App from "./App.tsx";
 import "./index.scss";
 import { AuthProvider } from "./context/AuthContext";
 import { FavProvider } from "./context/FavContext.tsx";
+import { CharacterProvider } from "./context/CharactersContext.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <AuthProvider>
       <FavProvider>
-        <App />
+        <CharacterProvider>
+          <App />
+        </CharacterProvider>
       </FavProvider>
     </AuthProvider>
   </React.StrictMode>,

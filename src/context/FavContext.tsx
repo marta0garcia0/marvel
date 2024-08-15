@@ -5,10 +5,8 @@ interface FavState {
   favs: number[];
 }
 
-// Create the context with an undefined default value
 const FavContext = createContext<FavState | undefined>(undefined);
 
-// Create a provider component
 export const FavProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {

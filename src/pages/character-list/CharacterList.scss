@@ -1,8 +1,14 @@
 @import "./../../styles/colors.scss";
+.CharacterList {
+  padding: 16px 34px;
+}
+.CharacterList-filter {
+  margin: 0 6px;
+  font-size: 12px;
+}
 .CharacterList-cards {
   display: flex;
   flex-wrap: wrap;
-  padding: 16px 34px;
 }
 .CharacterList-more {
   display: flex;
@@ -12,7 +18,8 @@
 }
 .CharacterList-more__button {
   margin: auto;
-  background-color: $red;
+  padding: 5px 20px;
+  background: linear-gradient(315deg, transparent 4px, $red 4px);
   color: $white;
   border: 0;
   margin-bottom: 20px;
@@ -22,6 +29,6 @@
   display: flex;
   margin-bottom: 20px;
   img {
-    margin: auto
+    margin: auto;
   }
 }

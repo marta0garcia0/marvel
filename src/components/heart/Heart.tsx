@@ -8,6 +8,7 @@ function Heart(props: { likes: number; onClick: () => void }) {
   return (
     <div className="Heart">
       <img
+        onClick={props.onClick}
         src={!props.likes ? heartEmpty : heartFull}
         alt={"likes"}
         width={24}

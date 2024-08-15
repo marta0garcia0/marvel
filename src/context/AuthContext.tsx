@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 import md5 from "md5";
 
-// Define the shape of the context state
 interface AuthState {
   updateHash: () => void;
   hash: string | null;
@@ -9,10 +8,8 @@ interface AuthState {
   ts: string | null;
 }
 
-// Create the context with an undefined default value
 const AuthContext = createContext<AuthState | undefined>(undefined);
 
-// Create a provider component
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
