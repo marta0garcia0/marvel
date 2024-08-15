@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
-import userEvent from "@testing-library/user-event";
-import { render, screen } from "@testing-library/react";
-import { Card } from "./Card";
+// import userEvent from "@testing-library/user-event";
+// import { render, screen } from "@testing-library/react";
+// import { Card } from "./Card";
 
 describe("Card", () => {
   it("should display card component", async () => {
