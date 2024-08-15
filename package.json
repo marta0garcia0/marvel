@@ -12,6 +12,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://marta0garcia0.github.io/marvel",
   "dependencies": {
     "axios": "^1.6.2",
     "dotenv": "^16.4.5",
