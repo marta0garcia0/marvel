@@ -28,6 +28,7 @@ function CharacterList() {
 
   useEffect(() => {
     setPage(0);
+    debugger
     if (ts && hash && !loading) {
       if (characters.length === 0) {
         if (ts && hash) {
