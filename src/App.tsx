@@ -11,7 +11,7 @@ import { MenuComponent } from "./components/menu/Menu";
 
 function App() {
   const { updateHash } = useAuth();
-
+  const BASE_URL = '/marvel'
   useEffect(() => {
     updateHash();
   }, []);
@@ -21,10 +21,10 @@ function App() {
       <Router>
         <MenuComponent>
           <Routes>
-            <Route path="/" element={<Loader url="characters" />} />
-            <Route path="/characters" element={<CharacterList />} />
-            <Route path="/characters/:id" element={<CharacterInfo />} />
-            <Route path="/favorites" element={<FavListPage />} />
+            <Route path={`${BASE_URL}/`} element={<Loader url={`${BASE_URL}/characters`} />} />
+            <Route path={`${BASE_URL}/characters`} element={<CharacterList />} />
+            <Route path={`${BASE_URL}/characters/:id`} element={<CharacterInfo />} />
+            <Route path={`${BASE_URL}/favorites`} element={<FavListPage />} />
           </Routes>
         </MenuComponent>
       </Router>

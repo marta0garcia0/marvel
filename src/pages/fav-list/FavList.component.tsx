@@ -41,7 +41,7 @@ function FavListPage() {
                 key={char.id}
                 character={char}
                 onClick={(id: string) =>
-                  navigate(`/characters/${id}`, { replace: true })
+                  navigate(`/marvel/characters/${id}`, { replace: true })
                 }
               />
             );

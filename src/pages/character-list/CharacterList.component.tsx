@@ -28,21 +28,6 @@ function CharacterList() {
 
   useEffect(() => {
     setPage(0);
-    debugger
-    if (ts && hash && !loading) {
-      if (characters.length === 0) {
-        if (ts && hash) {
-          setLoading(true);
-          getCharacters(ts, hash, filter, page)
-            .then((data: CharacterResponse) => {
-              updateCharacters({ characterInfo: data });
-            })
-            .finally(() => {
-              setLoading(false);
-            });
-        }
-      }
-    }
   }, [ts, hash]);
 
   const loadMore = () => {

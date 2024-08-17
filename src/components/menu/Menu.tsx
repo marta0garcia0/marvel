@@ -14,7 +14,7 @@ export const MenuComponent: React.FC<{ children: ReactNode }> = ({
     <div className="Menu">
       <div className="Menu-wrapper">
         <img
-          onClick={() => navigate("", { replace: true })}
+          onClick={() => navigate("/marvel", { replace: true })}
           className="Logo"
           src={logo}
           alt={"Marvel"}
@@ -23,7 +23,7 @@ export const MenuComponent: React.FC<{ children: ReactNode }> = ({
         <div className="Likes-container">
           <Heart
             likes={favs.length}
-            onClick={() => navigate("favorites", { replace: true })}
+            onClick={() => navigate("/marvel/favorites", { replace: true })}
           />
         </div>
       </div>
